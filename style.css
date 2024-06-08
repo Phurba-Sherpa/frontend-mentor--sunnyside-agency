@@ -256,10 +256,12 @@ img {
 }
 
 .gallery {
-    background-color: blue;
-    padding: 3rem;
     grid-column: full-start/full-end;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    /* align-items: center; */
+    display: grid;
 }
+
 .footer {
     background-color: orange;
     padding: 3rem;
