@@ -20,7 +20,7 @@
 
 <body>
   <main class="container">
-    <header id="section-header" class="header nav-open">
+    <header id="section-header" class="header">
       <nav class="nav">
         <img class="logo" src="./images/logo.svg" alt="sunny side" />
 
@@ -134,10 +134,26 @@
 
 
     <section class="gallery">
-      <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="cone">
-      <img src="./images/desktop/image-gallery-orange.jpg" alt="cone">
-      <img src="./images/desktop/image-gallery-cone.jpg" alt="cone">
-      <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="cone">
+      <picture>
+        <source media="(max-width: 900px)" srcset="images/mobile/image-gallery-milkbottles.jpg">
+        <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="cone">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 900px)" srcset="images/mobile/image-gallery-orange.jpg">
+        <img src="./images/desktop/image-gallery-orange.jpg" alt="cone">
+        </picture>
+        
+        <picture>
+        <source media="(max-width: 900px)" srcset="images/mobile/image-gallery-cone.jpg">
+        <img src="./images/desktop/image-gallery-cone.jpg" alt="cone">
+        </picture>
+        
+        <picture>
+        <source media="(max-width: 900px)" srcset="images/mobile/image-gallery-sugar-cubes.jpg">
+        <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="cone">
+      </picture>
+
     </section>
     <footer class="footer">
       <svg class="footer__logo" width="124" height="24" xmlns="http://www.w3.org/2000/svg">
