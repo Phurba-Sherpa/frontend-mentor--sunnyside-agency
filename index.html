@@ -20,16 +20,21 @@
 
 <body>
   <main class="container">
-    <header class="header">
-      <!-- <nav class="nav">
+    <header id="section-header" class="header nav-open">
+      <nav class="nav">
         <img class="logo" src="./images/logo.svg" alt="sunny side" />
+
         <ul class="nav-list">
           <li class="nav-item"><a href="#" class="nav-link">About</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
           <li class="nav-item"><a href="#" class="nav-link btn btn-cta">Contact</a></li>
         </ul>
-      </nav> -->
+
+        <button id="nav-btn" class="btn-mobile-nav">
+          <img src="images/icon-hamburger.svg" alt="mobile nav btn">
+        </button>
+      </nav>
       <h1 class="primary-heading">We are creatives</h1>
     </header>
     <section class="feature__text feature__text--1">
@@ -142,7 +147,7 @@
       </svg>
 
       <nav class="footer-nav">
-        <ul class="nav-list">
+        <ul class="footer-nav-list">
           <li class="nav-item">
             <a href="#" class="nav-link footer-link">About</a>
           </li>
@@ -197,6 +202,12 @@
       </ul>
     </footer>
     </div>
+
+    <script>
+      const navBtn = document.getElementById('nav-btn')
+      navBtn.addEventListener('click', () => document.getElementById('section-header').classList.toggle('nav-open'))
+    </script>
+    
 </body>
 
 </html>

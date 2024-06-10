@@ -44,6 +44,7 @@ body {
     font-optical-sizing: auto;
     font-family: var(--ff-mono);
     font-weight: 600;
+    overflow-x: hidden;
 }
 
 img {
@@ -105,7 +106,8 @@ img {
     align-items: center;
 }
 
-.nav-list {
+.nav-list,
+.footer-nav-list {
     list-style: none;
     display: flex;
     column-gap: 5rem;
@@ -132,6 +134,19 @@ img {
 .btn-cta:hover {
     color: var(--color-white);
     background-color: #6fcfff;
+}
+
+/* MOBIEL NAV */
+
+.btn-mobile-nav {
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.btn-mobile-nav > img {
+    width: 36px;
+    height: 27px;
 }
 
 /* ====================
@@ -400,5 +415,47 @@ footer svg>.icon {
 
     .feature {
         grid-column: full-start/full-end;
+    }
+
+    /* Mobile nav */
+    .btn-mobile-nav {
+        display: block;
+    }
+
+    .nav-list {
+        position: absolute;
+        background-color: #fffbf8;
+        margin-inline: auto;
+        left: 3rem;
+        right: 3rem;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 12rem 0 8rem 0;
+        top: 9rem;
+        clip-path: polygon(93% 9%, 100% 0, 100% 100%, 0% 100%, 0 9%);
+        transform: translateY(-20%);
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        transition: all .4s ease-in;
+
+    }
+
+    .nav-link:link,
+.nav-link:visited {
+    color: var(--color-grayish-blue-dark--1);
+    font-size: 2.4rem;
+}
+
+    .btn-cta:link,
+    .btn-cta:visited {
+        background-color: var(--color-yellow);
+    }
+
+    .nav-open .nav-list {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        visibility: visible;
     }
 }
