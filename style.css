@@ -400,6 +400,9 @@ footer svg>.icon {
 ================== */
 
 @media (max-width: 900px) {
+    .header {
+        background-image: url('./images/mobile/image-header.jpg');
+    }
     .feature__img,
     .feature__text {
         grid-column: full-start/full-end;
