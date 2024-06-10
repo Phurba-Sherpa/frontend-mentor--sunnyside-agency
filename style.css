@@ -410,6 +410,7 @@ footer svg>.icon {
 
     .feature__img--1 {
         grid-row: 2/3;
+        
     }
 
     .feature__text--1 {
@@ -418,6 +419,15 @@ footer svg>.icon {
 
     .feature {
         grid-column: full-start/full-end;
+    }
+
+    .feature--1 {
+        background-image: url(./images/mobile/image-graphic-design.jpg);
+    }
+
+    .feature--2  {
+        background-image: url(./images/mobile/image-photography.jpg);
+
     }
 
     /* Mobile nav */
